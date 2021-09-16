@@ -72,5 +72,27 @@
             </tr>
             </table>
             <hr>
+            <h1>String Processing</h1>
+            <h4>Comparison of programming languages (string functions)</h4>
+                    <blockquote>
+                        String functions are used in computer programming languages to manipulate a string or query information about a string (some do both).
+        
+        Most programming languages that have a string datatype will have some string functions although there may be other low-level ways within each language to handle strings directly. In object-oriented languages, string functions are often implemented as properties and methods of string objects. In functional and list-based languages a string is represented as a list (of character codes), therefore all list-manipulation procedures could be considered string functions. However such languages may implement a subset of explicit string-specific functions as well.
+                        <a href="https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(string_functions)">
+                        Link to source file</a>
+                    </blockquote>
+                   <pre>
+                    long long compute_hash(string const& s) {
+            const int p = 31;
+            const int m = 1e9 + 9;
+            long long hash_value = 0;
+            long long p_pow = 1;
+            for (char c : s) {
+                hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;
+                p_pow = (p_pow * p) % m;
+            }
+            return hash_value;
+        }
+                   </pre>
 </body>
 </html>
